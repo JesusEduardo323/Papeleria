@@ -1,6 +1,0 @@
-// Usar la base de datos
-use("northwind-store")
-
-// Consultar los registros
-// SELECT *  FROM clientes
-db.clientes.find()
