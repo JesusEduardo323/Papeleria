@@ -3,9 +3,9 @@ use("northwind-store")
 
 // Insertar un documento en la colección de clientes
 db.clientes.insertOne({
-    ClvCli: 1,
-    Nombre: "Jesús Eduardo",
-    Telefono: "3531255026",  // Número de 10 dígitos
+    ClvCli: 2,
+    Nombre: "Jesus Eduardo",
+    Telefono: ['3531060047', '3531232934'],  // Número de 10 dígitos
     Domicilio: {
         Ciudad: "Sahuayo",
         Region: "Michoacán",

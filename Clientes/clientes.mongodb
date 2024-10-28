@@ -20,9 +20,15 @@ db.createCollection("clientes", {
                     maxLength: 100
                 },
                 Telefono: {
-                    bsonType: "string",
-                    description: "Teléfono del cliente, debe tener exactamente 10 dígitos",
-                    pattern: "^[0-9]{10}$" 
+                    bsonType: 'array',
+                    minItems: 1, 
+                    maxItems: 2, 
+                    uniqueItems: true, 
+                    items: {
+                        bsonType: 'string',
+                        description: "Teléfono del cliente de 10 dígitos",
+                        pattern: "^[0-9]{10}$" 
+                    }
                 },
                 Domicilio: {
                     bsonType:'object',
@@ -48,9 +54,5 @@ db.createCollection("clientes", {
 
 db.clientes.createIndex(
     { ClvCli: 1 }, { unique: true }
-)
-
-db.clientes.createIndex(
-    { Telefono: 1 }, { unique: true }
 )
 
