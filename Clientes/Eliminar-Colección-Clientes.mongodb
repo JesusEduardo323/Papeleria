@@ -1,4 +1,0 @@
-// Usar la base de datos
-use("northwind-store")
-
-db.clientes.drop()
