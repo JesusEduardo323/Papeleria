@@ -1,0 +1,17 @@
+// Usar la base de datos
+use("northwind-store")
+
+// Insertar un documento en la colección de clientes
+db.clientes.insertOne({
+    ClvCli: 1,
+    Nombre: "Jesús Eduardo",
+    Telefono: "3531255026",  // Número de 10 dígitos
+    Domicilio: {
+        Ciudad: "Sahuayo",
+        Region: "Michoacán",
+        CP: 59000,
+        Pais: "México",
+        Calle: "Fresnos",
+        NumCasa: 323
+    }
+})
