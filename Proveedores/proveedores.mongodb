@@ -20,24 +20,31 @@ db.createCollection("proveedores", {
                     maxLength: 100
                 },
                 Telefono: {
-                    bsonType: "string",
-                    description: "Teléfono del proveedor, debe tener exactamente 10 dígitos y ser único",
-                    pattern: "^[0-9]{10}$"  // Exactamente 10 dígitos numéricos
+                    bsonType: 'array',
+                    minItems: 1, 
+                    maxItems: 2, 
+                    uniqueItems: true, 
+                    items: {
+                        bsonType: 'string',
+                        description: "Teléfono del cliente de 10 dígitos",
+                        pattern: "^[0-9]{10}$" 
+                    }
                 },
                 Domicilio: {
-                    bsonType: 'object',
-                    title: 'Validacion de Domicilio',
-                    required: ['Ciudad', 'Region', 'CP', 'Pais', 'Calle', 'NumCasa'],
+                    bsonType:'object',
+                    title:'Validacion de Domicilio',
+                    required: ['Ciudad','Region','CP','Pais','Calle','NumCasa'],
                     properties: {
-                        Ciudad: {bsonType: 'string'},
-                        Region: {bsonType: 'string'},
+                        Ciudad: {bsonType:'string'},
+                        Region: {bsonType:'string'},
                         CP: {
-                            bsonType: 'int',
-                            description: "Código postal de 5 dígitos"
+                            bsonType: 'int' ,
+                            description: "Código postal de 5 dígitos",
+                            pattern: "^[0-9]{5}$"
                         },
-                        Pais: {bsonType: 'string'},
-                        Calle: {bsonType: 'string'},
-                        NumCasa: {bsonType: 'int'},
+                        Pais: {bsonType:'string'},
+                        Calle: {bsonType:'string'},
+                        NumCasa: {bsonType:'int'},
                     }
                 },
                 Calificacion: {
@@ -62,13 +69,3 @@ db.createCollection("proveedores", {
 });
 
 db.proveedores.createIndex({ ClvProv: 1 }, { unique: true }); 
-
-// Crear índice único en el campo Domicilio
-db.proveedores.createIndex({
-    "Domicilio.Ciudad": 1,
-    "Domicilio.Region": 1,
-    "Domicilio.CP": 1,
-    "Domicilio.Pais": 1,
-    "Domicilio.Calle": 1,
-    "Domicilio.NumCasa": 1
-}, { unique: true });
