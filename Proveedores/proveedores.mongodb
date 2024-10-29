@@ -1,0 +1,74 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de proveedores con validaciones
+db.createCollection("proveedores", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: "Validación de Proveedores",
+            required: ["ClvProv", "Nombre", "Telefono", "Domicilio"],
+            properties: {
+                ClvProv: {
+                    bsonType: "int",
+                    description: "Clave del proveedor (identificador único)"
+                },
+                Nombre: {
+                    bsonType: "string",
+                    description: "Nombre del proveedor",
+                    minLength: 1,
+                    maxLength: 100
+                },
+                Telefono: {
+                    bsonType: "string",
+                    description: "Teléfono del proveedor, debe tener exactamente 10 dígitos y ser único",
+                    pattern: "^[0-9]{10}$"  // Exactamente 10 dígitos numéricos
+                },
+                Domicilio: {
+                    bsonType: 'object',
+                    title: 'Validacion de Domicilio',
+                    required: ['Ciudad', 'Region', 'CP', 'Pais', 'Calle', 'NumCasa'],
+                    properties: {
+                        Ciudad: {bsonType: 'string'},
+                        Region: {bsonType: 'string'},
+                        CP: {
+                            bsonType: 'int',
+                            description: "Código postal de 5 dígitos"
+                        },
+                        Pais: {bsonType: 'string'},
+                        Calle: {bsonType: 'string'},
+                        NumCasa: {bsonType: 'int'},
+                    }
+                },
+                Calificacion: {
+                    bsonType: "int",
+                    description: "Calificación del proveedor",
+                    minimum: 1,
+                    maximum: 5
+                },
+                PlazoEntrega: {
+                    bsonType: "int",
+                    description: "Plazo de entrega en días",
+                    minimum: 1
+                },
+                Reputacion: {
+                    bsonType: "string",
+                    description: "Reputación del proveedor",
+                    enum: ["buena", "mala", "regular"]
+                }
+            }
+        }
+    }
+});
+
+db.proveedores.createIndex({ ClvProv: 1 }, { unique: true }); 
+
+// Crear índice único en el campo Domicilio
+db.proveedores.createIndex({
+    "Domicilio.Ciudad": 1,
+    "Domicilio.Region": 1,
+    "Domicilio.CP": 1,
+    "Domicilio.Pais": 1,
+    "Domicilio.Calle": 1,
+    "Domicilio.NumCasa": 1
+}, { unique: true });

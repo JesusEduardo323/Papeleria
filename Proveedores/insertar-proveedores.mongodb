@@ -1,0 +1,13 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un documento en la colección de proveedores
+db.proveedores.insertOne({
+    ClvProv: 2,  // Clave del proveedor
+    Nombre: "Proveedores S.A. de C.V.",  // Nombre del proveedor
+    Telefono: "3531232934",  // Teléfono del proveedor (10 dígitos)
+    Direccion: "Calle Falsa 123",  // Dirección del proveedor (asegúrate de que sea única)
+    Calificacion: 4,  // Calificación del proveedor (entre 1 y 5)
+    PlazoEntrega: 3,  // Plazo de entrega en días
+    Reputacion: "buena"  // Reputación del proveedor
+})
