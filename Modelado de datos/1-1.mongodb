@@ -1,0 +1,153 @@
+use("Papeleria");
+
+//forma embebida
+db.createCollection("Historial_Inventario", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["clvhis","producto","clvven","clvcom","clvdevven","clvdevcom","canant","cannueva","fechacambio","motivo"],
+            properties: {
+				clvhis: {
+					bsonType: "int",
+					description: "ID del historial de inventario"
+				},
+				producto: {
+					bsonType:"object",
+					required: ["ClvPro","nombre", "precio", "costo","Ganancia","Descuento","Imagen", "subcategoria"],
+					properties: {
+						ClvPro: { 
+							bsonType: "int", 
+							description: "Debe ser una cadena de texto" 
+						},
+						nombre: { 
+							bsonType: "string", 
+							description: "Debe ser una cadena de texto" 
+						},
+						precio: { 
+							bsonType: "double", 
+							description: "Debe ser un número decimal" 
+						},
+						costo: { 
+							bsonType: "double", 
+							description: "Debe ser un número decimal" 
+						},
+						Ganancia: { 
+							bsonType: "double", 
+							description: "Debe ser un número decimal" 
+						},
+						Descuento: { 
+							bsonType: "double", 
+							description: "Porcentaje de descuento" 
+						},
+						Imagen: { 
+							bsonType: "string", 
+							description: "Url de la imagen" 
+						},
+						subcategoria: {
+							bsonType: "object",
+							required: ["clvsubcat", "nombre","clvcat"],
+							properties: {
+								clvsubcat: { 
+									bsonType: "int", 
+									description: "ID de la subcategoría" 
+								},
+								nombre: { 
+									bsonType: "string", 
+									description: "Debe ser una cadena de texto" 
+								},
+								clvcat: { 
+									bsonType: "int", 
+									description: "ID de la categoría" 
+								}
+							}
+						},
+					},
+				}, 
+				clvven: {
+					bsonType: "int",
+					description: "ID del venta"
+				},
+				clvcom: {
+					bsonType: "int",
+					description: "ID del compra"
+				},
+				clvdevven: {
+					bsonType: "int",
+					description: "ID de la devolucion de la venta"
+				},
+				clvdevcom: {
+					bsonType: "int",
+					description: "ID de la devolucion de la compra"
+				},
+				canant: {
+					bsonType: "int",
+					description: "Cantidad de producto en el inventario"
+				},
+				cannueva: {
+					bsonType: "int",
+					description: "Cantidad de producto en el inventario"
+				},
+				fechacambio: {
+					bsonType: "date",
+					description: "Fecha de la transacción"
+				},
+				motivo: {
+					bsonType: "string",
+					description: "Motivo de la transacción"
+				}
+            }
+        }
+    }
+});
+
+//forma referenciada
+db.createCollection("Historial_Inventario_Ref", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["clvhis","producto","clvven","clvcom","clvdevven","clvdevcom","canant","cannueva","fechacambio","motivo"],
+            properties: {
+                clvhis: {
+					bsonType: "int",
+					description: "ID del historial de inventario"
+				},
+				producto: {
+					bsonType:"int",
+					description: "ID del producto referenciado"
+				},
+				clvven: {
+					bsonType: "int",
+					description: "ID del venta"
+				},
+				clvcom: {
+					bsonType: "int",
+					description: "ID del compra"
+				},
+				clvdevven: {
+					bsonType: "int",
+					description: "ID de la devolucion de la venta"
+				},
+				clvdevcom: {
+					bsonType: "int",
+					description: "ID de la devolucion de la compra"
+				},
+				canant: {
+					bsonType: "int",
+					description: "Cantidad de producto en el inventario"
+				},
+				cannueva: {
+					bsonType: "int",
+					description: "Cantidad de producto en el inventario"
+				},
+				fechacambio: {
+					bsonType: "date",
+					description: "Fecha de la transacción"
+				},
+				motivo: {
+					bsonType: "string",
+					description: "Motivo de la transacción"
+				}
+            }
+        }
+    }
+});
