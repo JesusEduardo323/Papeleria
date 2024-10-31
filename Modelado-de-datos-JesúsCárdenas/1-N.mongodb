@@ -1,0 +1,38 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de subcategorías con referencia a ClvCat en categorías
+db.createCollection("subcategorias", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: "Validación del objeto Subcategorías",
+            required: ["ClvSubCat", "Nombre", "ClvCat"],
+            properties: {
+                ClvSubCat: {
+                    bsonType: "int",
+                    description: "Clave única de la subcategoría"
+                },
+                Nombre: {
+                    bsonType: "string",
+                    description: "Nombre de la subcategoría"
+                },
+                ClvCat: {
+                    bsonType: "int",
+                    description: "Clave de la categoría a la que pertenece",
+                    description: "Referencia a la clave de categoría"
+                }
+            }
+        }
+    }
+})
+
+// Crear índices en ClvSubCat y ClvCat en subcategorías
+db.subcategorias.createIndex(
+    { ClvSubCat: 1 },
+    { unique: true } 
+)
+
+db.subcategorias.createIndex(
+    { ClvCat: 1 }
+)
