@@ -1,0 +1,30 @@
+use("Papeleria")
+
+db.createCollection("compras", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["ClvCom", "PrecioCompra", "FechaCompra"],
+            properties: {
+                ClvCom: {
+                    bsonType: "int",
+                    description: "Clave de la compra"
+                },
+                PrecioCompra: {
+                    bsonType: "double",  // Asegúrate de que sea 'double' o 'decimal' si es necesario
+                    description: "Precio de la compra"
+                },
+                FechaCompra: {
+                    bsonType: "date",
+                    description: "Fecha de la compra"
+                }
+            }
+        }
+    }
+});
+
+
+db.compras.createIndex(
+	{ ClvCom: 1 }, 
+	{ unique: true }
+)

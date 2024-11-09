@@ -1,0 +1,44 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de ventas con validaciones adicionales
+db.createCollection("ventas", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Ventas",
+			required: ["ClvVen", "ClvCli", "PrecioTotal", "Fecha", "Cantidad"],
+			properties: {
+				ClvVen: {
+				bsonType: "int",
+				description: "Clave única de la venta"
+				},
+				ClvCli: {
+				bsonType: "int",
+				description: "Clave del cliente, referenciada a la colección de clientes",
+				minimum: 1 // Asumiendo que la clave de cliente debe ser un número positivo
+				},
+				PrecioTotal: {
+				bsonType: "double",
+				description: "Precio total de la venta",
+				minimum: 0 // Evita precios negativos
+				},
+				Fecha: {
+				bsonType: "date",
+				description: "Fecha de la venta",
+				},
+				Cantidad: {
+				bsonType: "int",
+				description: "Cantidad total de productos en la venta",
+				minimum: 1 // Asegura que haya al menos un producto en la venta
+				}
+			}
+		}
+	}
+})
+
+// Crear índice para ClvVen (único)
+db.ventas.createIndex(
+	{ ClvVen: 1 },
+	{ unique: true }
+)

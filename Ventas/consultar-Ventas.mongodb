@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar las ventas
+// SELECT * FROM ventas
+db.ventas.find()

@@ -1,0 +1,146 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un detalle de producto y venta
+db.det_pro_ven.insertMany([
+    {
+        "ClvPro": 1,
+        "ClvVen": 1,
+        "Cantidad": 10,
+        "PrecioUnitario": 2000.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 2,
+        "ClvVen": 2,
+        "Cantidad": 5,
+        "PrecioUnitario": 2001.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 3,
+        "ClvVen": 3,
+        "Cantidad": 8,
+        "PrecioUnitario": 2002.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 4,
+        "ClvVen": 4,
+        "Cantidad": 12,
+        "PrecioUnitario": 2003.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 5,
+        "ClvVen": 5,
+        "Cantidad": 6,
+        "PrecioUnitario": 2004.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 6,
+        "ClvVen": 6,
+        "Cantidad": 20,
+        "PrecioUnitario": 2005.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 7,
+        "ClvVen": 7,
+        "Cantidad": 3,
+        "PrecioUnitario": 2006.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 8,
+        "ClvVen": 8,
+        "Cantidad": 15,
+        "PrecioUnitario": 2007.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 9,
+        "ClvVen": 9,
+        "Cantidad": 100,
+        "PrecioUnitario": 2008.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 10,
+        "ClvVen": 10,
+        "Cantidad": 2,
+        "PrecioUnitario": 2009.50,
+        "DescuentoAplicado": 5 
+    },
+    {
+        "ClvPro": 1,
+        "ClvVen": 1,
+        "Cantidad": 9,
+        "PrecioUnitario": 2010.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 2,
+        "ClvVen": 2,
+        "Cantidad": 5,
+        "PrecioUnitario": 2011.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 3,
+        "ClvVen": 3,
+        "Cantidad": 10,
+        "PrecioUnitario": 2012.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 4,
+        "ClvVen": 4,
+        "Cantidad": 7,
+        "PrecioUnitario": 2013.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 5,
+        "ClvVen": 5,
+        "Cantidad": 5,
+        "PrecioUnitario": 2014.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 6,
+        "ClvVen": 6,
+        "Cantidad": 4,
+        "PrecioUnitario": 2015.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 7,
+        "ClvVen": 7,
+        "Cantidad": 8,
+        "PrecioUnitario": 2016.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 8,
+        "ClvVen": 8,
+        "Cantidad": 6,
+        "PrecioUnitario": 2017.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 9,
+        "ClvVen": 9,
+        "Cantidad": 20,
+        "PrecioUnitario": 2018.50,
+        "DescuentoAplicado": 5
+    },
+    {
+        "ClvPro": 10,
+        "ClvVen": 10,
+        "Cantidad": 3,
+        "PrecioUnitario": 2019.50,
+        "DescuentoAplicado": 5
+    }
+])

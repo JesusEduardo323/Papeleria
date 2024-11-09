@@ -1,0 +1,46 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección devoluciones_compras con validaciones adicionales
+db.createCollection("devoluciones_compras", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Devoluciones y Compras",
+			required: ["ClvDevCom", "ClvCom", "ClvPro", "Cantidad", "FechaDev", "Motivo", "Ajuste"],
+			properties: {
+				ClvDevCom: {
+				bsonType: "int",
+				description: "Clave única de la devolución de compra"
+				},
+				ClvCom: {
+				bsonType: "int",
+				description: "Clave de la compra, referenciada a la colección compras"
+				},
+				ClvPro: {
+				bsonType: "int",
+				description: "Clave del producto, referenciado a la colección productos"
+				},
+				Cantidad: {
+				bsonType: "int",
+				description: "Cantidad de producto devuelto",
+				minimum: 1 // Asegura que al menos un producto sea devuelto
+				},
+				FechaDev: {
+				bsonType: "date",
+				description: "Fecha de devolución de la compra"
+				},
+				Motivo: {
+				bsonType: "string",
+				description: "Motivo de la devolución",
+				maxLength: 500 // Limita la longitud del motivo
+				},
+				Ajuste: {
+				bsonType: "double",
+				description: "Monto del ajuste aplicado",
+				minimum: 0 // Evita ajustes negativos
+				}
+			}
+		}
+	}
+})

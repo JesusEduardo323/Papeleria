@@ -1,0 +1,76 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar una venta
+db.ventas.insertMany([
+    {
+        "ClvVen": 1,
+        "ClvCli": 1,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-01"),
+        "Cantidad": 10
+    },
+    {
+        "ClvVen": 2,
+        "ClvCli": 2,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-02"),
+        "Cantidad": 5
+    },
+    {
+        "ClvVen": 3,
+        "ClvCli": 3,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-03"),
+        "Cantidad": 8
+    },
+    {
+        "ClvVen": 4,
+        "ClvCli": 4,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-04"),
+        "Cantidad": 12
+    },
+    {
+        "ClvVen": 5,
+        "ClvCli": 5,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-05"),
+        "Cantidad": 6
+    },
+    {
+        "ClvVen": 6,
+        "ClvCli": 6,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-06"),
+        "Cantidad": 20
+    },
+    {
+        "ClvVen": 7,
+        "ClvCli": 7,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-07"),
+        "Cantidad": 3
+    },
+    {
+        "ClvVen": 8,
+        "ClvCli": 8,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-08"),
+        "Cantidad": 15
+    },
+    {
+        "ClvVen": 9,
+        "ClvCli": 9,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-09"),
+        "Cantidad": 100
+    },
+    {
+        "ClvVen": 10,
+        "ClvCli": 10,
+         "PrecioTotal": 2000.50,
+        "Fecha": ISODate("2024-09-10"),
+        "Cantidad": 2
+    }
+])

@@ -1,0 +1,37 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de inventario con validaciones adicionales
+db.createCollection("Inventario", {
+	validator: {
+		$jsonSchema: {
+		bsonType: "object",
+		title: "Validación de Inventario",
+		required: ["ClvPro", "CanDisponible", "CanMinima", "CanMaxima", "FechaActualizacion"],
+		properties: {
+			ClvPro: {
+			bsonType: "int",
+			description: "Clave única del producto, referenciado a la colección productos"
+			},
+			CanDisponible: {
+			bsonType: "int",
+			description: "Cantidad disponible en inventario",
+			minimum: 0 // Evita cantidades negativas
+			},
+			CanMinima: {
+			bsonType: "int",
+			description: "Cantidad mínima requerida en inventario",
+			minimum: 0 // Evita valores negativos
+			},
+			CanMaxima: {
+			bsonType: "int",
+			description: "Cantidad máxima disponible en inventario",
+			minimum: 1 // Debe haber al menos un valor máximo permitido
+			},
+			FechaActualizacion: {
+			bsonType: "date",
+			description: "Última fecha de actualización del inventario"
+			}
+		}
+	}}
+})

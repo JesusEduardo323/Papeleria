@@ -1,0 +1,48 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar una categoria
+db.categorias.insertMany(
+    [
+    {
+        "ClvCat": 1,
+        "Nombre": "Papelería"
+    },
+    {
+        "ClvCat": 2,
+        "Nombre": "Útiles Escolares"
+    },
+    {
+        "ClvCat": 3,
+        "Nombre": "Oficina"
+    },
+    {
+        "ClvCat": 4,
+        "Nombre": "Tecnología"
+    },
+    {
+        "ClvCat": 5,
+        "Nombre": "Mobiliario de Oficina"
+    },
+    {
+        "ClvCat": 6,
+        "Nombre": "Arte y Manualidades"
+    },
+    {
+        "ClvCat": 7,
+        "Nombre": "Limpieza"
+    },
+    {
+        "ClvCat": 8,
+        "Nombre": "Electrónica"
+    },
+    {
+        "ClvCat": 9,
+        "Nombre": "Accesorios Escolares"
+    },
+    {
+        "ClvCat": 10,
+        "Nombre": "Empaque y Envío"
+    }
+]
+)

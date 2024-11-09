@@ -1,5 +1,5 @@
 // Usar la base de datos
-use("northwind-store")
+use("Papeleria")
 
 // Crear la colección de clientes 
 db.createCollection("clientes", {
@@ -7,7 +7,7 @@ db.createCollection("clientes", {
         $jsonSchema: {
             bsonType: "object",
             title: "Validación de Clientes",
-            required: ["ClvCli", "Nombre", "Telefono", "Domicilio"],
+            required: ["ClvCli", "Nombre", "Apellido", "Telefono", "Domicilio"],
             properties: {
                 ClvCli: {
                     bsonType: "int",
@@ -19,6 +19,12 @@ db.createCollection("clientes", {
                     minLength: 1,
                     maxLength: 100
                 },
+                Apellido: {
+                    bsonType: "string",
+                    description: "Apellido del cliente",
+                    minLength: 1,
+                    maxLength: 100
+                },
                 Telefono: {
                     bsonType: 'array',
                     minItems: 1, 
@@ -26,25 +32,24 @@ db.createCollection("clientes", {
                     uniqueItems: true, 
                     items: {
                         bsonType: 'string',
-                        description: "Teléfono del cliente de 10 dígitos",
-                        pattern: "^[0-9]{10}$" 
+                        description: "Teléfono del cliente (10 dígitos)",
                     }
                 },
                 Domicilio: {
                     bsonType:'object',
-                    title:'Validacion de Domicilio',
-                    required: ['Ciudad','Region','CP','Pais','Calle','NumCasa'],
+                    title:'Validación de Domicilio',
+                    required: ['Ciudad', 'Region', 'CP', 'Pais', 'Calle', 'NumCasa'],
                     properties: {
-                        Ciudad: {bsonType:'string'},
-                        Region: {bsonType:'string'},
+                        Ciudad: { bsonType: 'string' },
+                        Region: { bsonType: 'string' },
                         CP: {
-                            bsonType: 'int' ,
+                            bsonType: 'string',  // O usar "int" sin el patrón si prefieres el tipo numérico
                             description: "Código postal de 5 dígitos",
                             pattern: "^[0-9]{5}$"
                         },
-                        Pais: {bsonType:'string'},
-                        Calle: {bsonType:'string'},
-                        NumCasa: {bsonType:'int'},
+                        Pais: { bsonType: 'string' },
+                        Calle: { bsonType: 'string' },
+                        NumCasa: { bsonType: 'string' },
                     }
                 }
             }
@@ -52,7 +57,7 @@ db.createCollection("clientes", {
     }
 })
 
+// Crear índice único en ClvCli
 db.clientes.createIndex(
     { ClvCli: 1 }, { unique: true }
 )
-

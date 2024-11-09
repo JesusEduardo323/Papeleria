@@ -1,0 +1,105 @@
+//Usar la base de datos
+use('Papeleria')
+
+//Insertar una subcategoria
+db.subcategorias.insertMany([{
+	ClvSub:1,
+	Nombre:"Papelería",
+	ClvCategoria:1
+},
+{
+	ClvSub:2,
+	Nombre:"Papel",
+	ClvCategoria:1
+},
+{
+	ClvSub:3,
+	Nombre:"Papel de tarta",
+	ClvCategoria:1
+},
+{
+	ClvSub:4,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:1
+},
+{
+	ClvSub:5,
+	Nombre:"Papel de café",
+	ClvCategoria:1
+},
+{
+	ClvSub:6,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:1
+},
+{
+	ClvSub:7,
+	Nombre:"Papel de café",
+	ClvCategoria:2
+},
+{
+	ClvSub:8,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:2
+},
+{
+	ClvSub:9,
+	Nombre:"Papel de café",
+	ClvCategoria:3
+},
+{
+	ClvSub:10,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:3
+},
+{
+	ClvSub:11,
+	Nombre:"Papel de café",
+	ClvCategoria:4
+},
+{
+	ClvSub:12,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:4
+},
+{
+	ClvSub:13,
+	Nombre:"Papel de café",
+	ClvCategoria:5
+},
+{
+	ClvSub:14,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:5
+},
+{
+	ClvSub:15,
+	Nombre:"Papel de café",
+	ClvCategoria:6
+},
+{
+	ClvSub:16,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:6
+},
+{
+	ClvSub:17,
+	Nombre:"Papel de café",
+	ClvCategoria:7
+},
+{
+	ClvSub:18,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:7
+},
+{
+	ClvSub:19,
+	Nombre:"Papel de café",
+	ClvCategoria:8
+},
+{
+	ClvSub:20,
+	Nombre:"Papel de chocolate",
+	ClvCategoria:8
+}
+])

@@ -1,17 +1,168 @@
 // Usar la base de datos
-use("northwind-store")
+use("Papeleria")
 
-// Insertar un documento en la colección de clientes
-db.clientes.insertOne({
-    ClvCli: 2,
-    Nombre: "Jesus Eduardo",
-    Telefono: ['3531060047', '3531232934'],  // Número de 10 dígitos
-    Domicilio: {
-        Ciudad: "Sahuayo",
-        Region: "Michoacán",
-        CP: 59000,
-        Pais: "México",
-        Calle: "Fresnos",
-        NumCasa: 323
+// Insertar un documento en la colección "proveedores"
+// Insertar un documento en la colección "proveedores"
+db.clientes.insertMany([
+    {
+        "ClvCli": 1,
+        "Nombre": "Juan",
+        "Apellido": "Pérez",
+        "Telefono": [
+            "555-1234"
+        ],
+        "Domicilio": {
+            "Ciudad": "Ciudad de México",
+            "Region": "Centro",
+            "CP": "01000",
+            "Pais": "México",
+            "Calle": "Calle Falsa",
+            "NumCasa": "123"
+        }
+    },
+    {
+        "ClvCli": 2,
+        "Nombre": "María",
+        "Apellido": "González",
+        "Telefono": [
+            "555-5678"
+        ],
+        "Domicilio": {
+            "Ciudad": "Ciudad de México",
+            "Region": "Centro",
+            "CP": "01001",
+            "Pais": "México",
+            "Calle": "Avenida Siempreviva",
+            "NumCasa": "742"
+        }
+    },
+    {
+        "ClvCli": 3,
+        "Nombre": "Luis",
+        "Apellido": "Ramírez",
+        "Telefono": [
+            "555-8765"
+        ],
+        "Domicilio": {
+            "Ciudad": "Monterrey",
+            "Region": "Norte",
+            "CP": "64000",
+            "Pais": "México",
+            "Calle": "Calle Luna",
+            "NumCasa": "12"
+        }
+    },
+    {
+        "ClvCli": 4,
+        "Nombre": "Ana",
+        "Apellido": "Sánchez",
+        "Telefono": [
+            "555-4321"
+        ],
+        "Domicilio": {
+            "Ciudad": "Guadalajara",
+            "Region": "Occidente",
+            "CP": "44100",
+            "Pais": "México",
+            "Calle": "Calle Sol",
+            "NumCasa": "99"
+        }
+    },
+    {
+        "ClvCli": 5,
+        "Nombre": "Carlos",
+        "Apellido": "Martínez",
+        "Telefono": [
+            "555-2468"
+        ],
+        "Domicilio": {
+            "Ciudad": "Querétaro",
+            "Region": "Bajío",
+            "CP": "76000",
+            "Pais": "México",
+            "Calle": "Calle Estrella",
+            "NumCasa": "58"
+        }
+    },
+    {
+        "ClvCli": 6,
+        "Nombre": "Sofía",
+        "Apellido": "López",
+        "Telefono": [
+            "555-9876"
+        ],
+        "Domicilio": {
+            "Ciudad": "Puebla",
+            "Region": "Centro",
+            "CP": "72000",
+            "Pais": "México",
+            "Calle": "Avenida Sur",
+            "NumCasa": "123"
+        }
+    },
+    {
+        "ClvCli": 7,
+        "Nombre": "Ricardo",
+        "Apellido": "Torres",
+        "Telefono": [
+            "555-6543"
+        ],
+        "Domicilio": {
+            "Ciudad": "León",
+            "Region": "Bajío",
+            "CP": "37500",
+            "Pais": "México",
+            "Calle": "Boulevard Principal",
+            "NumCasa": "456"
+        }
+    },
+    {
+        "ClvCli": 8,
+        "Nombre": "Fernanda",
+        "Apellido": "Mendoza",
+        "Telefono": [
+            "555-3210"
+        ],
+        "Domicilio": {
+            "Ciudad": "Morelia",
+            "Region": "Occidente",
+            "CP": "58000",
+            "Pais": "México",
+            "Calle": "Calle Norte",
+            "NumCasa": "789"
+        }
+    },
+    {
+        "ClvCli": 9,
+        "Nombre": "Jorge",
+        "Apellido": "Reyes",
+        "Telefono": [
+            "555-7890"
+        ],
+        "Domicilio": {
+            "Ciudad": "Chihuahua",
+            "Region": "Norte",
+            "CP": "31000",
+            "Pais": "México",
+            "Calle": "Avenida del Bosque",
+            "NumCasa": "321"
+        }
+    },
+    {
+        "ClvCli": 10,
+        "Nombre": "Carmen",
+        "Apellido": "Silva",
+        "Telefono": [
+            "555-1357"
+        ],
+        "Domicilio": {
+            "Ciudad": "Tijuana",
+            "Region": "Norte",
+            "CP": "22000",
+            "Pais": "México",
+            "Calle": "Calle Oriente",
+            "NumCasa": "654"
+        }
     }
-})
+]
+);

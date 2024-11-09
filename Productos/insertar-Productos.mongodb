@@ -1,0 +1,306 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un producto
+db.productos.insertMany([
+    {
+        "ClvPro": 1,
+        "Nombre": "Lápiz",
+        "Precio": 5.0000,
+        "Costo": 2.0000,
+        "Ganancia": 3.0000,
+        "Descuento": 0.5000,
+        "Imagen": "EjRWeJA=",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 2,
+        "Nombre": "Cuaderno",
+        "Precio": 20.0000,
+        "Costo": 10.0000,
+        "Ganancia": 10.0000,
+        "Descuento": 1.0000,
+        "Imagen": "mHZUMhA=",
+        "ClvSubCat": 2
+    },
+    {
+        "ClvPro": 3,
+        "Nombre": "Bolígrafo",
+        "Precio": 8.0000,
+        "Costo": 4.0000,
+        "Ganancia": 4.0000,
+        "Descuento": 0.8000,
+        "Imagen": "q83v",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 4,
+        "Nombre": "Regla",
+        "Precio": 10.0000,
+        "Costo": 6.0000,
+        "Ganancia": 4.0000,
+        "Descuento": 0.7000,
+        "Imagen": "/ty6",
+        "ClvSubCat": 3
+    },
+    {
+        "ClvPro": 5,
+        "Nombre": "Borrador",
+        "Precio": 3.0000,
+        "Costo": 1.0000,
+        "Ganancia": 2.0000,
+        "Descuento": 0.3000,
+        "Imagen": "EjSrzQ==",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 6,
+        "Nombre": "Tijeras",
+        "Precio": 15.0000,
+        "Costo": 8.0000,
+        "Ganancia": 7.0000,
+        "Descuento": 1.5000,
+        "Imagen": "RWeJEjQ=",
+        "ClvSubCat": 4
+    },
+    {
+        "ClvPro": 7,
+        "Nombre": "Calculadora",
+        "Precio": 50.0000,
+        "Costo": 30.0000,
+        "Ganancia": 20.0000,
+        "Descuento": 5.0000,
+        "Imagen": "h2VDIQk=",
+        "ClvSubCat": 4
+    },
+    {
+        "ClvPro": 8,
+        "Nombre": "Compás",
+        "Precio": 12.0000,
+        "Costo": 7.0000,
+        "Ganancia": 5.0000,
+        "Descuento": 0.8000,
+        "Imagen": "mHarze8=",
+        "ClvSubCat": 3
+    },
+    {
+        "ClvPro": 9,
+        "Nombre": "Marcador",
+        "Precio": 6.0000,
+        "Costo": 3.0000,
+        "Ganancia": 3.0000,
+        "Descuento": 0.6000,
+        "Imagen": "y6/tmHY=",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 10,
+        "Nombre": "Papel Bond",
+        "Precio": 120.0000,
+        "Costo": 80.0000,
+        "Ganancia": 40.0000,
+        "Descuento": 10.0000,
+        "Imagen": "obLD1OU=",
+        "ClvSubCat": 5
+    },
+    {
+        "ClvPro": 11,
+        "Nombre": "Cuaderno Profesional",
+        "Precio": 25.0000,
+        "Costo": 12.0000,
+        "Ganancia": 13.0000,
+        "Descuento": 2.5000,
+        "Imagen": "qrvM3Q==",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 12,
+        "Nombre": "Block de Dibujo",
+        "Precio": 35.0000,
+        "Costo": 18.0000,
+        "Ganancia": 17.0000,
+        "Descuento": 3.0000,
+        "Imagen": "u8zd7g==",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 13,
+        "Nombre": "Resma de Papel Carta",
+        "Precio": 150.0000,
+        "Costo": 100.0000,
+        "Ganancia": 50.0000,
+        "Descuento": 5.0000,
+        "Imagen": "zN3u/w==",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 14,
+        "Nombre": "Pluma de Gel",
+        "Precio": 12.0000,
+        "Costo": 6.0000,
+        "Ganancia": 6.0000,
+        "Descuento": 1.2000,
+        "Imagen": "ESIzRA==",
+        "ClvSubCat": 2
+    },
+    {
+        "ClvPro": 15,
+        "Nombre": "Portaminas",
+        "Precio": 18.0000,
+        "Costo": 10.0000,
+        "Ganancia": 8.0000,
+        "Descuento": 1.8000,
+        "Imagen": "IjNEVQ==",
+        "ClvSubCat": 2
+    },
+    {
+        "ClvPro": 16,
+        "Nombre": "Plumón Permanente",
+        "Precio": 20.0000,
+        "Costo": 11.0000,
+        "Ganancia": 9.0000,
+        "Descuento": 2.0000,
+        "Imagen": "M0RVZg==",
+        "ClvSubCat": 2
+    },
+    {
+        "ClvPro": 17,
+        "Nombre": "Escuadra 30cm",
+        "Precio": 15.0000,
+        "Costo": 8.0000,
+        "Ganancia": 7.0000,
+        "Descuento": 1.5000,
+        "Imagen": "RFVmdw==",
+        "ClvSubCat": 3
+    },
+    {
+        "ClvPro": 18,
+        "Nombre": "Transportador",
+        "Precio": 10.0000,
+        "Costo": 5.0000,
+        "Ganancia": 5.0000,
+        "Descuento": 1.0000,
+        "Imagen": "VWZ3iA==",
+        "ClvSubCat": 3
+    },
+    {
+        "ClvPro": 19,
+        "Nombre": "Juego de Geometría",
+        "Precio": 40.0000,
+        "Costo": 25.0000,
+        "Ganancia": 15.0000,
+        "Descuento": 2.0000,
+        "Imagen": "ZneImQ==",
+        "ClvSubCat": 3
+    },
+    {
+        "ClvPro": 20,
+        "Nombre": "Calculadora Científica",
+        "Precio": 250.0000,
+        "Costo": 180.0000,
+        "Ganancia": 70.0000,
+        "Descuento": 10.0000,
+        "Imagen": "d4iZAA==",
+        "ClvSubCat": 4
+    },
+    {
+        "ClvPro": 21,
+        "Nombre": "Calculadora Básica",
+        "Precio": 45.0000,
+        "Costo": 30.0000,
+        "Ganancia": 15.0000,
+        "Descuento": 5.0000,
+        "Imagen": "iJkAEQ==",
+        "ClvSubCat": 4
+    },
+    {
+        "ClvPro": 22,
+        "Nombre": "Silla Giratoria",
+        "Precio": 1200.0000,
+        "Costo": 800.0000,
+        "Ganancia": 400.0000,
+        "Descuento": 50.0000,
+        "Imagen": "mQARIg==",
+        "ClvSubCat": 5
+    },
+    {
+        "ClvPro": 23,
+        "Nombre": "Silla Ejecutiva",
+        "Precio": 1500.0000,
+        "Costo": 1100.0000,
+        "Ganancia": 400.0000,
+        "Descuento": 75.0000,
+        "Imagen": "qhEiMw==",
+        "ClvSubCat": 5
+    },
+    {
+        "ClvPro": 24,
+        "Nombre": "Silla Plegable",
+        "Precio": 300.0000,
+        "Costo": 200.0000,
+        "Ganancia": 100.0000,
+        "Descuento": 10.0000,
+        "Imagen": "uyIzRA==",
+        "ClvSubCat": 5
+    },
+    {
+        "ClvPro": 25,
+        "Nombre": "Lonchera Escolar",
+        "Precio": 150.0000,
+        "Costo": 90.0000,
+        "Ganancia": 60.0000,
+        "Descuento": 5.0000,
+        "Imagen": "zDNEVQ==",
+        "ClvSubCat": 9
+    },
+    {
+        "ClvPro": 26,
+        "Nombre": "Estuche Escolar",
+        "Precio": 80.0000,
+        "Costo": 45.0000,
+        "Ganancia": 35.0000,
+        "Descuento": 3.0000,
+        "Imagen": "3URVZg==",
+        "ClvSubCat": 9
+    },
+    {
+        "ClvPro": 27,
+        "Nombre": "Mochila Juvenil",
+        "Precio": 500.0000,
+        "Costo": 300.0000,
+        "Ganancia": 200.0000,
+        "Descuento": 20.0000,
+        "Imagen": "7lVmdw==",
+        "ClvSubCat": 9
+    },
+    {
+        "ClvPro": 28,
+        "Nombre": "Papel Fotográfico",
+        "Precio": 200.0000,
+        "Costo": 150.0000,
+        "Ganancia": 50.0000,
+        "Descuento": 10.0000,
+        "Imagen": "/2Z3iA==",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 29,
+        "Nombre": "Papel Opalina",
+        "Precio": 120.0000,
+        "Costo": 80.0000,
+        "Ganancia": 40.0000,
+        "Descuento": 8.0000,
+        "Imagen": "qneImQ==",
+        "ClvSubCat": 1
+    },
+    {
+        "ClvPro": 30,
+        "Nombre": "Papel Adhesivo",
+        "Precio": 180.0000,
+        "Costo": 130.0000,
+        "Ganancia": 50.0000,
+        "Descuento": 15.0000,
+        "Imagen": "u4iZAA==",
+        "ClvSubCat": 1
+    }
+])

@@ -1,0 +1,6 @@
+//Usar la base de datos
+use('Papeleria')
+
+//Consultar el inventario
+//SELECT * FROM Inventario	
+db.Inventario.find()

@@ -1,0 +1,39 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección det_pro_ven con validaciones adicionales
+db.createCollection("det_pro_ven", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Detalle de Producto y Venta",
+			required: ["ClvPro", "ClvVen", "Cantidad", "PrecioUnitario", "DescuentoAplicado"],
+			properties: {
+				ClvPro: {
+				bsonType: "int",
+				description: "Clave del producto, referenciado a la colección productos"
+				},
+				ClvVen: {
+				bsonType: "int",
+				description: "Clave de la venta, referenciada a la colección ventas"
+				},
+				Cantidad: {
+				bsonType: "int",
+				description: "Cantidad de producto vendido",
+				minimum: 1 // Asegura que al menos un producto sea vendido
+				},
+				PrecioUnitario: {
+				bsonType: "double", // Asegura que sea 'double' o 'decimal' si es necesario
+				description: "Precio unitario del producto",
+				minimum: 0 // Evita precios negativos
+				},
+				DescuentoAplicado: {
+				bsonType: "int",
+				description: "Descuento aplicado al producto",
+				minimum: 0, // Evita descuentos negativos
+				// maximum: { $const: "$PrecioUnitario" } // El descuento no puede ser mayor al precio unitario
+				}
+			}
+		}
+	}
+})

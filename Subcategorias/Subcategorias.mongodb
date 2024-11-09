@@ -1,0 +1,36 @@
+use("Papeleria");
+
+// Crear la colección "Subcategorias" con validación
+db.createCollection("Subcategorias", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: "Validación de subcategorías",
+            required: ["ClvCat", "Nombre"],
+            properties: {
+                ClvSub: {
+                    bsonType: "int",
+                    description: "Clave de la subcategoría",
+                    minimum: 1  // Asegura que la clave sea un número entero positivo
+                },
+                Nombre: {
+                    bsonType: "string",
+                    description: "Nombre de la categoria",
+                    minLength: 1,
+                    maxLength: 100,
+                    pattern: "^[a-zA-Z0-9\\-\\s]+$"  // Permite solo letras, números, guiones y espacios
+                },
+                FechaCreacion: {
+                    bsonType: "date",
+                    description: "Fecha de creación de la categoría"
+                }
+            }
+        }
+    }
+});
+
+// Crear índice único en "ClvCat" para la colección "Subcategorias"
+db.Subcategorias.createIndex(
+    { ClvCat: 1 },
+    { unique: true }
+);

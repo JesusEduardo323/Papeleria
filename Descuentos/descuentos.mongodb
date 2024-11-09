@@ -1,0 +1,43 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de descuentos con validaciones adicionales
+db.createCollection("descuentos", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Descuentos",
+			required: ["ClvDesc", "ClvPro", "Porcentaje"/*, "FechaInicio", "FechaFin"*/],
+			properties: {
+				ClvDesc: {
+				bsonType: "int",
+				description: "Clave del descuento"
+				},
+				ClvPro: {
+				bsonType: "int",
+				description: "Clave del producto"
+				},
+				Porcentaje: {
+				bsonType: "int",
+				description: "Porcentaje del descuento",
+				minimum: 0, // Asegura que el porcentaje sea positivo o cero
+				maximum: 100 // Asegura que el porcentaje no sea mayor a 100
+				},
+				FechaInicio: {
+				bsonType: "date",
+				description: "Fecha de inicio del descuento"
+				},
+				FechaFin: {
+				bsonType: "date",
+				description: "Fecha de fin del descuento"
+				}
+			}
+		}
+	}
+})
+
+// Crear índice para ClvDesc (único)
+db.descuentos.createIndex(
+	{ ClvDesc: 1 },
+	{ unique: true }
+)

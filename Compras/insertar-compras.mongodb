@@ -1,0 +1,78 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar múltiples documentos en la colección "compras" con FechaCompra en formato ISODate
+db.compras.insertMany([{
+    "ClvCom": 1,
+    "PrecioCompra": 1500.50,
+    "FechaCompra": ISODate("2024-09-01")
+},{"ClvCom": 2,
+    "PrecioCompra": 2000.50,
+    "FechaCompra": ISODate("2024-09-02")
+},{"ClvCom": 3,
+    "PrecioCompra": 2500.50,
+    "FechaCompra": ISODate("2024-09-03")
+},{"ClvCom": 4,
+    "PrecioCompra": 3000.50,
+    "FechaCompra": ISODate("2024-09-04")
+},{"ClvCom": 5,
+    "PrecioCompra": 3500.50,
+    "FechaCompra": ISODate("2024-09-05")
+},{"ClvCom": 6,
+    "PrecioCompra": 4000.50,
+    "FechaCompra": ISODate("2024-09-06")
+},{"ClvCom": 7,
+    "PrecioCompra": 4500.50,
+    "FechaCompra": ISODate("2024-09-07")
+},{"ClvCom": 8,
+    "PrecioCompra": 5000.50,
+    "FechaCompra": ISODate("2024-09-08")
+},{"ClvCom": 9,
+    "PrecioCompra": 5500.50,
+    "FechaCompra": ISODate("2024-09-09")
+},{"ClvCom": 10,
+    "PrecioCompra": 6000.50,
+    "FechaCompra": ISODate("2024-09-10")
+},{"ClvCom": 11,
+    "PrecioCompra": 6500.50,
+    "FechaCompra": ISODate("2024-09-11")
+},{"ClvCom": 12,
+    "PrecioCompra": 7000.50,
+    "FechaCompra": ISODate("2024-09-12")
+},{"ClvCom": 13,
+    "PrecioCompra": 7500.50,
+    "FechaCompra": ISODate("2024-09-13")
+},{"ClvCom": 14,
+    "PrecioCompra": 8000.50,
+    "FechaCompra": ISODate("2024-09-14")
+},{"ClvCom": 15,
+    "PrecioCompra": 8500.50,
+    "FechaCompra": ISODate("2024-09-15")
+},{"ClvCom": 16,
+    "PrecioCompra": 9000.50,
+    "FechaCompra": ISODate("2024-09-16")
+},{"ClvCom": 17,
+    "PrecioCompra": 9500.50,
+    "FechaCompra": ISODate("2024-09-17")
+},{"ClvCom": 18,
+    "PrecioCompra": 10000.50,
+    "FechaCompra": ISODate("2024-09-18")
+},{"ClvCom": 19,
+    "PrecioCompra": 10500.50,
+    "FechaCompra": ISODate("2024-09-19")
+},{"ClvCom": 20,
+    "PrecioCompra": 11000.50,
+    "FechaCompra": ISODate("2024-09-20")
+}])
+// db.compras.insertMany([
+//     {
+//         "ClvCom": 1,
+//         "PrecioCompra": 1500.00,
+//         "FechaCompra": ISODate("2024-09-01")
+//     },
+//     {
+//         "ClvCom": 2,
+//         "PrecioCompra": 1200.50,
+//         "FechaCompra": ISODate("2024-09-05")
+//     }
+// ]);

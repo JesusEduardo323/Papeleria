@@ -1,0 +1,64 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección historial_inventario con validaciones adicionales
+db.createCollection("historial_inventario", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Historial de Inventario",
+			required: ["ClvHistorial", "ClvPro", "CantidadAnterior", "CantidadNueva", "FechaHistorial", "Motivo"],
+			properties: {
+				ClvHistorial: {
+				bsonType: "int",
+				description: "Clave única del historial de inventario"
+				},
+				ClvPro: {
+				bsonType: "int",
+				description: "Clave del producto, referenciado a la colección productos"
+				},
+				ClvVen: {
+				bsonType: "int",
+				description: "Clave de la venta asociada (opcional)"
+				},
+				ClvCom: {
+				bsonType: "int",
+				description: "Clave de la compra asociada (opcional)"
+				},
+				ClvDevVen: {
+				bsonType: "int",
+				description: "Clave de la devolución de ventas asociada (opcional)"
+				},
+				ClvDevCom: {
+				bsonType: "int",
+				description: "Clave de la devolución de compras asociada (opcional)"
+				},
+				CantidadAnterior: {
+				bsonType: "int",
+				description: "Cantidad anterior en inventario",
+				minimum: 0 // Asegura que no haya cantidades negativas
+				},
+				CantidadNueva: {
+				bsonType: "int",
+				description: "Cantidad nueva en inventario",
+				minimum: 0 // Asegura que no haya cantidades negativas
+				},
+				FechaHistorial: {
+				bsonType: "date",
+				description: "Fecha del registro en el historial de inventario"
+				},
+				Motivo: {
+				bsonType: "string",
+				description: "Motivo del ajuste en el historial de inventario",
+				maxLength: 500 // Limita la longitud del motivo
+				}
+			}
+		}
+	}
+})
+
+// Crear índice compuesto para ClvHistorial y ClvPro (único)
+db.historial_inventario.createIndex(
+	{ ClvHistorial: 1},
+	{ unique: true }
+)

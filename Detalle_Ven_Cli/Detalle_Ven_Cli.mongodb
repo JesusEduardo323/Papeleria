@@ -1,0 +1,37 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección det_ven_cli con validaciones adicionales
+db.createCollection("det_ven_cli", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Detalle de Venta y Cliente",
+			required: ["ClvVen", "ClvCli", "FechaCompra", "TotalCompra", "MetodoPago"],
+			properties: {
+				ClvVen: {
+				bsonType: "int",
+				description: "Clave única de la venta, referenciada a la colección ventas"
+				},
+				ClvCli: {
+				bsonType: "int",
+				description: "Clave del cliente, referenciada a la colección clientes"
+				},
+				FechaCompra: {
+				bsonType: "date",
+				description: "Fecha de la compra realizada"
+				},
+				TotalCompra: {
+				bsonType: "double",
+				description: "Monto total de la compra",
+				minimum: 0 // Asegura que no haya valores negativos
+				},
+				MetodoPago: {
+				bsonType: "string",
+				description: "Método de pago utilizado",
+				enum: ["Efectivo", "Tarjeta", "Transferencia"] // Limita a ciertos métodos de pago
+				}
+			}
+		}
+	}
+})

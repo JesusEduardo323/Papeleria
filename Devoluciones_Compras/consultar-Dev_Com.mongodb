@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar los detalles de producto y venta
+// SELECT * FROM det_pro_ven	
+db.devoluciones_compras.find()

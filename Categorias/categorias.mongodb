@@ -1,0 +1,29 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de categorias
+db.createCollection("categorias", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: "Validación de Categorias",
+            required: ["ClvCat", "Nombre"],
+            properties: {
+				ClvCat: {
+                    bsonType: "int",
+                    description: "Clave de la categoria"
+                },
+                Nombre: {
+                    bsonType: "string",
+                    description: "Nombre de la categoria",
+                    minLength: 1,
+                    maxLength: 100
+                }
+            }
+        } 
+    }
+})
+
+db.categorias.createIndex(
+    { ClvCat: 1 }, { unique: true }
+)

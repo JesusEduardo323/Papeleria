@@ -1,0 +1,185 @@
+//Usar la base de datos
+use('Papeleria')
+
+//Insertar un cambio al inventario
+db.historial_inventario.insertMany([{
+	ClvHistorial:1,
+	ClvPro:1,
+	ClvVen:1,
+	CantidadAnterior:2,
+	CantidadNueva:1,
+	FechaHistorial:new Date(),
+	Motivo:"Venta"
+},
+{
+	ClvHistorial:2,
+	ClvPro:2,
+	ClvVen:2,
+	CantidadAnterior:3,
+	CantidadNueva:2,
+	FechaHistorial:new Date(),
+	Motivo:"Compra"
+},
+{
+	ClvHistorial:3,
+	ClvPro:3,
+	ClvVen:3,
+	CantidadAnterior:4,
+	CantidadNueva:3,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de venta"
+},
+{
+	ClvHistorial:4,
+	ClvPro:4,
+	ClvVen:4,
+	CantidadAnterior:5,
+	CantidadNueva:4,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de compra"
+},
+{
+	ClvHistorial:5,
+	ClvPro:5,
+	ClvVen:5,
+	CantidadAnterior:6,
+	CantidadNueva:5,
+	FechaHistorial:new Date(),
+	Motivo:"Ajuste"
+},
+{
+	ClvHistorial:6,
+	ClvPro:6,
+	ClvVen:6,
+	CantidadAnterior:7,
+	CantidadNueva:6,
+	FechaHistorial:new Date(),
+	Motivo:"Venta"
+},
+{
+	ClvHistorial:7,
+	ClvPro:7,
+	ClvVen:7,
+	CantidadAnterior:8,
+	CantidadNueva:7,
+	FechaHistorial:new Date(),
+	Motivo:"Compra"
+},
+{
+	ClvHistorial:8,
+	ClvPro:8,
+	ClvVen:8,
+	CantidadAnterior:9,
+	CantidadNueva:8,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de venta"
+},
+{
+	ClvHistorial:9,
+	ClvPro:9,
+	ClvVen:9,
+	CantidadAnterior:10,
+	CantidadNueva:9,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de compra"
+},
+{
+	ClvHistorial:10,
+	ClvPro:10,
+	ClvVen:10,
+	CantidadAnterior:11,
+	CantidadNueva:10,
+	FechaHistorial:new Date(),
+	Motivo:"Ajuste"
+},
+{
+	ClvHistorial:11,
+	ClvPro:11,
+	ClvVen:11,
+	CantidadAnterior:12,
+	CantidadNueva:11,
+	FechaHistorial:new Date(),
+	Motivo:"Venta"
+},
+{
+	ClvHistorial:12,
+	ClvPro:12,
+	ClvVen:12,
+	CantidadAnterior:13,
+	CantidadNueva:12,
+	FechaHistorial:new Date(),
+	Motivo:"Compra"
+},
+{
+	ClvHistorial:13,
+	ClvPro:13,
+	ClvVen:13,
+	CantidadAnterior:14,
+	CantidadNueva:13,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de venta"
+},
+{
+	ClvHistorial:14,
+	ClvPro:14,
+	ClvVen:14,
+	CantidadAnterior:15,
+	CantidadNueva:14,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de compra"
+},
+{
+	ClvHistorial:15,
+	ClvPro:15,
+	ClvVen:15,
+	CantidadAnterior:16,
+	CantidadNueva:15,
+	FechaHistorial:new Date(),
+	Motivo:"Ajuste"
+},
+{
+	ClvHistorial:16,
+	ClvPro:16,
+	ClvVen:16,
+	CantidadAnterior:17,
+	CantidadNueva:16,
+	FechaHistorial:new Date(),
+	Motivo:"Venta"
+},
+{
+	ClvHistorial:17,
+	ClvPro:17,
+	ClvVen:17,
+	CantidadAnterior:18,
+	CantidadNueva:17,
+	FechaHistorial:new Date(),
+	Motivo:"Compra"
+},
+{
+	ClvHistorial:18,
+	ClvPro:18,
+	ClvVen:18,
+	CantidadAnterior:19,
+	CantidadNueva:18,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de venta"
+},
+{
+	ClvHistorial:19,
+	ClvPro:19,
+	ClvVen:19,
+	CantidadAnterior:20,
+	CantidadNueva:19,
+	FechaHistorial:new Date(),
+	Motivo:"Devolución de compra"
+},
+{
+	ClvHistorial:20,
+	ClvPro:20,
+	ClvVen:20,
+	CantidadAnterior:21,
+	CantidadNueva:20,
+	FechaHistorial:new Date(),
+	Motivo:"Ajuste"
+}
+])

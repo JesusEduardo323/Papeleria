@@ -1,0 +1,134 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un detalle de venta y cliente
+db.det_ven_cli.insertMany(
+    [
+    {
+        "ClvVen": 1,
+        "ClvCli": 1,
+        "FechaCompra": ISODate("2024-09-02"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Efectivo"
+    },
+    {
+        "ClvVen": 2,
+        "ClvCli": 2,
+        "FechaCompra": ISODate("2024-09-03"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Crédito"
+    },
+    {
+        "ClvVen": 3,
+        "ClvCli": 3,
+        "FechaCompra": ISODate("2024-09-04"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Débito"
+    },
+    {
+        "ClvVen": 4,
+        "ClvCli": 4,
+        "FechaCompra": ISODate("2024-09-05"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Efectivo"
+    },
+    {
+        "ClvVen": 5,
+        "ClvCli": 5,
+        "FechaCompra": ISODate("2024-09-06"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Transferencia Bancaria"
+    },
+    {
+        "ClvVen": 6,
+        "ClvCli": 6,
+        "FechaCompra": ISODate("2024-09-07"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Crédito"
+    },
+    {
+        "ClvVen": 7,
+        "ClvCli": 7,
+        "FechaCompra": ISODate("2024-09-08"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Débito"
+    },
+    {
+        "ClvVen": 8,
+        "ClvCli": 8,
+        "FechaCompra": ISODate("2024-09-09"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Efectivo"
+    },
+    {
+        "ClvVen": 9,
+        "ClvCli": 9,
+        "FechaCompra": ISODate("2024-09-10"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Transferencia Bancaria"
+    },
+    {
+        "ClvVen": 10,
+        "ClvCli": 10,
+        "FechaCompra": ISODate("2024-09-11"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Crédito"
+    },
+    {
+        "ClvVen": 1,
+        "ClvCli": 1,
+        "FechaCompra": ISODate("2024-09-12"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Débito"
+    },
+    {
+        "ClvVen": 2,
+        "ClvCli": 2,
+        "FechaCompra": ISODate("2024-09-13"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Efectivo"
+    },
+    {
+        "ClvVen": 3,
+        "ClvCli": 3,
+        "FechaCompra": ISODate("2024-09-14"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Transferencia Bancaria"
+    },
+    {
+        "ClvVen": 4,
+        "ClvCli": 4,
+        "FechaCompra": ISODate("2024-09-15"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Crédito"
+    },
+    {
+        "ClvVen": 5,
+        "ClvCli": 5,
+        "FechaCompra": ISODate("2024-09-16"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Débito"
+    },
+    {
+        "ClvVen": 6,
+        "ClvCli": 6,
+        "FechaCompra": ISODate("2024-09-17"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Efectivo"
+    },
+    {
+        "ClvVen": 7,
+        "ClvCli": 7,
+        "FechaCompra": ISODate("2024-09-18"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Transferencia Bancaria"
+    },
+    {
+        "ClvVen": 8,
+        "ClvCli": 8,
+        "FechaCompra": ISODate("2024-09-19"),
+         "TotalCompra": 2000.50,
+        "MetodoPago": "Tarjeta de Crédito"
+    }
+]
+)

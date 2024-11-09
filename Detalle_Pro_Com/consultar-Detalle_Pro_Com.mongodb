@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar los detalles de compra
+// SELECT * FROM det_pro_com
+db.det_pro_com.find()

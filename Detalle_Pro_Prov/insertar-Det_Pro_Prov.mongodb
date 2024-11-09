@@ -1,0 +1,126 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un detalle de producto y proveedor
+db.det_pro_prov.insertMany([
+    {
+        "ClvPro": 1,
+        "ClvProv": 1,
+        "PrecionCompra": 1000.50,
+        "PlazoEntrega": 1
+    },
+    {
+        "ClvPro": 2,
+        "ClvProv": 2,
+        "PrecionCompra": 1500.50,
+        "PlazoEntrega": 2
+    },
+    {
+        "ClvPro": 3,
+        "ClvProv": 3,
+        "PrecionCompra": 5000.50,
+        "PlazoEntrega": 3
+    },
+    {
+        "ClvPro": 4,
+        "ClvProv": 4,
+        "PrecionCompra": 2000.50,
+        "PlazoEntrega": 4
+    },
+    {
+        "ClvPro": 5,
+        "ClvProv": 5,
+        "PrecionCompra": 1250.50,
+        "PlazoEntrega": 5
+    },
+    {
+        "ClvPro": 6,
+        "ClvProv": 6,
+        "PrecionCompra": 8000.50,
+        "PlazoEntrega": 6
+    },
+    {
+        "ClvPro": 7,
+        "ClvProv": 7,
+        "PrecionCompra": 2500.50,
+        "PlazoEntrega": 7
+    },
+    {
+        "ClvPro": 8,
+        "ClvProv": 8,
+        "PrecionCompra": 1000.50,
+        "PlazoEntrega": 8
+    },
+    {
+        "ClvPro": 9,
+        "ClvProv": 9,
+        "PrecionCompra": 7000.50,
+        "PlazoEntrega": 9
+    },
+    {
+        "ClvPro": 10,
+        "ClvProv": 10,
+        "PrecionCompra": 3000.50,
+        "PlazoEntrega": 10
+    },
+    {
+        "ClvPro": 1,
+        "ClvProv": 2,
+        "PrecionCompra": 3000.50,
+        "PlazoEntrega": 3
+    },
+    {
+        "ClvPro": 2,
+        "ClvProv": 3,
+        "PrecionCompra": 1550.50,
+        "PlazoEntrega": 4
+    },
+    {
+        "ClvPro": 3,
+        "ClvProv": 1,
+        "PrecionCompra": 4000.50,
+        "PlazoEntrega": 5
+    },
+    {
+        "ClvPro": 4,
+        "ClvProv": 2,
+        "PrecionCompra": 5500.50,
+        "PlazoEntrega": 6
+    },
+    {
+        "ClvPro": 5,
+        "ClvProv": 1,
+        "PrecionCompra": 3000.50,
+        "PlazoEntrega": 7
+    },
+    {
+        "ClvPro": 6,
+        "ClvProv": 3,
+        "PrecionCompra": 2000.50,
+        "PlazoEntrega": 8
+    },
+    {
+        "ClvPro": 7,
+        "ClvProv": 2,
+        "PrecionCompra": 4500.50,
+        "PlazoEntrega": 9
+    },
+    {
+        "ClvPro": 8,
+        "ClvProv": 1,
+        "PrecionCompra": 3500.50,
+        "PlazoEntrega": 10
+    },
+    {
+        "ClvPro": 9,
+        "ClvProv": 3,
+        "PrecionCompra": 1000.50,
+        "PlazoEntrega": 11
+    },
+    {
+        "ClvPro": 10,
+        "ClvProv": 2,
+        "PrecionCompra": 5000.50,
+        "PlazoEntrega": 12
+    }
+])

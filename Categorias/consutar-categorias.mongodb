@@ -1,0 +1,7 @@
+u
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar las categorias
+// SELECT * FROM categorias
+db.categorias.find()

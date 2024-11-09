@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar los detalles de producto y proveedor
+// SELECT * FROM det_pro_prov	
+db.det_pro_prov.find()

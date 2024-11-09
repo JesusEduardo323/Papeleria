@@ -1,0 +1,5 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Eliminar la colección	
+db.det_pro_prov.drop()

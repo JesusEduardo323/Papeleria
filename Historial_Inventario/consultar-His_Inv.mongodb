@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar el historial de inventario
+// SELECT * FROM his_inventario	
+db.historial_inventario.find()

@@ -1,0 +1,111 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar los descuentos con "Porcentaje" como enteros
+db.descuentos.insertMany([
+    {
+        "ClvDesc": 1,
+        "ClvPro": 1,
+        "Porcentaje": 10,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 2,
+        "ClvPro": 2,
+        "Porcentaje": 15,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 3,
+        "ClvPro": 3,
+        "Porcentaje": 5,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 4,
+        "ClvPro": 4,
+        "Porcentaje": 20,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 5,
+        "ClvPro": 5,
+        "Porcentaje": 12,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 6,
+        "ClvPro": 6,
+        "Porcentaje": 8,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 7,
+        "ClvPro": 7,
+        "Porcentaje": 25,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 8,
+        "ClvPro": 8,
+        "Porcentaje": 10,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 9,
+        "ClvPro": 9,
+        "Porcentaje": 7,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 10,
+        "ClvPro": 10,
+        "Porcentaje": 30,
+        "FechaInicio": ISODate("2024-09-01"),
+        "FechaFin": ISODate("2024-09-30")
+    },
+    {
+        "ClvDesc": 11,
+        "ClvPro": 1,
+        "Porcentaje": 5,
+        "FechaInicio": ISODate("2024-10-01"),
+        "FechaFin": ISODate("2024-10-15")
+    },
+    {
+        "ClvDesc": 12,
+        "ClvPro": 2,
+        "Porcentaje": 10,
+        "FechaInicio": ISODate("2024-10-01"),
+        "FechaFin": ISODate("2024-10-15")
+    },
+    {
+        "ClvDesc": 13,
+        "ClvPro": 3,
+        "Porcentaje": 3,
+        "FechaInicio": ISODate("2024-10-01"),
+        "FechaFin": ISODate("2024-10-15")
+    },
+    {
+        "ClvDesc": 14,
+        "ClvPro": 4,
+        "Porcentaje": 15,
+        "FechaInicio": ISODate("2024-10-01"),
+        "FechaFin": ISODate("2024-10-15")
+    },
+    {
+        "ClvDesc": 15,
+        "ClvPro": 5,
+        "Porcentaje": 6,
+        "FechaInicio": ISODate("2024-10-01"),
+        "FechaFin": ISODate("2024-10-15")
+    }
+]);

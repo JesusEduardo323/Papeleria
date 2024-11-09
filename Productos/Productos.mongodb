@@ -1,0 +1,57 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de productos con validaciones adicionales
+db.createCollection("productos", {
+	validator: {
+		$jsonSchema: {
+		bsonType: "object",
+		title: "Validación de Productos",
+		required: ["ClvPro", "Nombre", "Costo", "Ganancia", "Descuento", "Imagen", "ClvSubCategoria"],
+		properties: {
+			ClvPro: {
+			bsonType: "int",
+			description: "Clave única del producto"
+			},
+			Nombre: {
+			bsonType: "string",
+			description: "Nombre del producto",
+			minLength: 1, // Evita nombres vacíos
+			maxLength: 100 // Limita la longitud del nombre
+			},
+			Costo: {
+			bsonType: "double",
+			description: "Costo del producto",
+			minimum: 0 // Evita costos negativos
+			},
+			Ganancia: {
+			bsonType: "double",
+			description: "Ganancia del producto",
+			minimum: 0 // Evita ganancias negativas
+			},
+			Descuento: {
+			bsonType: "double",
+			description: "Descuento del producto",
+			minimum: 0, // Evita descuentos negativos
+			maximum: 100 // Limita el descuento al 100%
+			},
+			Imagen: {
+			bsonType: "string",
+			description: "URL de la imagen del producto",
+			maxLength: 255 // Limita la longitud de la URL de la imagen
+			},
+			ClvSubCategoria: {
+			bsonType: "int",
+			description: "Clave de la subcategoría referenciada",
+			minimum: 1 // Asume que es un valor positivo
+			}
+		}
+		}
+	}
+})
+
+// Crear índice para ClvPro (único)
+db.productos.createIndex(
+	{ ClvPro: 1 },
+	{ unique: true }
+)

@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Eliminar la colección	
+db.descuentos.drop()
+

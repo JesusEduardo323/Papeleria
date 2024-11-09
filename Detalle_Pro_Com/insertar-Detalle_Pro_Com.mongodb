@@ -1,0 +1,102 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un detalle de compra
+db.det_pro_com.insertMany([
+    {
+        "ClvPro": 1,
+        "ClvCom": 1,
+        "Cantidad": 50,
+        "PrecioUnitario": 11000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 2,
+        "ClvCom": 1,
+        "Cantidad": 20,
+        "PrecioUnitario": 1500.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 3,
+        "ClvCom": 2,
+        "Cantidad": 100,
+        "PrecioUnitario": 4000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 4,
+        "ClvCom": 3,
+        "Cantidad": 75,
+        "PrecioUnitario": 8000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 5,
+        "ClvCom": 2,
+        "Cantidad": 200,
+        "PrecioUnitario": 1500.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 6,
+        "ClvCom": 3,
+        "Cantidad": 30,
+        "PrecioUnitario": 1000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 7,
+        "ClvCom": 2,
+        "Cantidad": 15,
+        "PrecioUnitario": 2500.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 8,
+        "ClvCom": 1,
+        "Cantidad": 80,
+        "PrecioUnitario": 2000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 9,
+        "ClvCom": 2,
+        "Cantidad": 150,
+        "PrecioUnitario": 0.8000 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 10,
+        "ClvCom": 3,
+        "Cantidad": 40,
+        "PrecioUnitario": 5000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 1,
+        "ClvCom": 2,
+        "Cantidad": 30,
+        "PrecioUnitario": 3000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 2,
+        "ClvCom": 3,
+        "Cantidad": 10,
+        "PrecioUnitario": 1550.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 3,
+        "ClvCom": 1,
+        "Cantidad": 60,
+        "PrecioUnitario": 4000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 4,
+        "ClvCom": 2,
+        "Cantidad": 55,
+        "PrecioUnitario": 8000.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 5,
+        "ClvCom": 1,
+        "Cantidad": 300,
+        "PrecioUnitario": 1500.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    },
+    {
+        "ClvPro": 6,
+        "ClvCom": 3,
+        "Cantidad": 20,
+        "PrecioUnitario": 1100.50 // Asegúrate de usar un valor numérico para "PrecioUnitario"
+    }
+])

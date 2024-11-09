@@ -1,5 +1,5 @@
 // Usar la base de datos
-use("northwind-store")
+use("Papeleria")
 
 // Consultar los registros
 // SELECT *  FROM clientes

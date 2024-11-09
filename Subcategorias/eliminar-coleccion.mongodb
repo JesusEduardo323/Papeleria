@@ -1,0 +1,5 @@
+//Usar la base de datos
+use('Papeleria')
+
+//Eliminar la coleccion
+db.Subcategorias.drop()

@@ -1,4 +1,5 @@
 // Usar la base de datos
 use("Papeleria")
 
-db.clientes.drop()
+// Eliminar la colección	
+db.ventas.drop()

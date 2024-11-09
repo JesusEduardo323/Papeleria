@@ -1,0 +1,146 @@
+//Usar la base de datos
+use('Papeleria')
+
+//Insertar un cambio al inventario
+db.Inventario.insertMany([{
+	ClvPro:1,
+	CanDisponible:2,
+	CanMinima:1,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:2,
+	CanDisponible:3,
+	CanMinima:2,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:3,
+	CanDisponible:4,
+	CanMinima:3,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:4,
+	CanDisponible:5,
+	CanMinima:4,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:5,
+	CanDisponible:6,
+	CanMinima:5,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:6,
+	CanDisponible:7,
+	CanMinima:6,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:7,
+	CanDisponible:8,
+	CanMinima:7,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:8,
+	CanDisponible:9,
+	CanMinima:8,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:9,
+	CanDisponible:10,
+	CanMinima:9,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:10,
+	CanDisponible:11,
+	CanMinima:10,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:1,
+	CanDisponible:12,
+	CanMinima:11,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:2,
+	CanDisponible:13,
+	CanMinima:12,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:3,
+	CanDisponible:14,
+	CanMinima:13,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:4,
+	CanDisponible:15,
+	CanMinima:14,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:5,
+	CanDisponible:16,
+	CanMinima:15,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:6,
+	CanDisponible:17,
+	CanMinima:16,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:7,
+	CanDisponible:18,
+	CanMinima:17,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:8,
+	CanDisponible:19,
+	CanMinima:18,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:9,
+	CanDisponible:20,
+	CanMinima:19,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+},
+{
+	ClvPro:10,
+	CanDisponible:21,
+	CanMinima:20,
+	CanMaxima:100,
+	FechaActualizacion:new Date()
+}
+
+])

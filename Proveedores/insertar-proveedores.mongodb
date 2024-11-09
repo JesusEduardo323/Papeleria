@@ -3,19 +3,85 @@ use("Papeleria")
 
 // Insertar un documento en la colección de proveedores
 // Insertar un documento en la colección "proveedores"
-db.proveedores.insertOne({
-    ClvProv: 101,
-    Nombre: "Proveedor ABC",
-    Telefono: ["9876543210", "1234567890"],  // Lista de teléfonos
+db.proveedores.insertMany([
+{
+    ClvProv: 106,
+    Nombre: "Proveedor PQR",
+    Telefono: ["9876543215", "1234567895"],
     Domicilio: {
-        Ciudad: "Guadalajara",
-        Region: "Jalisco",
-        CP: 44100, // Código postal como int
-        Pais: "MX", // Cambiar según tu formato
+        Ciudad: "Ciudad de México",
+        Region: "Distrito Federal",
+        CP: 50000,
+        Pais: "MX",
         Calle: "Calle Ejemplo",
-        NumCasa: 25
+        NumCasa: 30
+    },
+    Calificacion: 1,
+    PlazoEntrega: 7,
+    Reputacion: "buena"
+},
+{
+    ClvProv: 107,
+    Nombre: "Proveedor STU",
+    Telefono: ["9876543216", "1234567896"],
+    Domicilio: {
+        Ciudad: "Ciudad de México",
+        Region: "Distrito Federal",
+        CP: 50000,
+        Pais: "MX",
+        Calle: "Calle Ejemplo",
+        NumCasa: 31
+    },
+    Calificacion: 2,
+    PlazoEntrega: 8,
+    Reputacion: "buena"
+},
+{
+    ClvProv: 108,
+    Nombre: "Proveedor VWX",
+    Telefono: ["9876543217", "1234567897"],
+    Domicilio: {
+        Ciudad: "Ciudad de México",
+        Region: "Distrito Federal",
+        CP: 50000,
+        Pais: "MX",
+        Calle: "Calle Ejemplo",
+        NumCasa: 32
+    },
+    Calificacion: 3,
+    PlazoEntrega: 9,
+    Reputacion: "buena"
+},
+{
+    ClvProv: 109,
+    Nombre: "Proveedor XYZ",
+    Telefono: ["9876543218", "1234567898"],
+    Domicilio: {
+        Ciudad: "Ciudad de México",
+        Region: "Distrito Federal",
+        CP: 50000,
+        Pais: "MX",
+        Calle: "Calle Ejemplo",
+        NumCasa: 33
     },
     Calificacion: 4,
-    PlazoEntrega: 2,
+    PlazoEntrega: 10,
     Reputacion: "buena"
-});
+},
+{
+    ClvProv: 110,
+    Nombre: "Proveedor 123",
+    Telefono: ["9876543219", "1234567899"],
+    Domicilio: {
+        Ciudad: "Ciudad de México",
+        Region: "Distrito Federal",
+        CP: 50000,
+        Pais: "MX",
+        Calle: "Calle Ejemplo",
+        NumCasa: 34
+    },
+    Calificacion: 5,
+    PlazoEntrega: 11,
+    Reputacion: "buena"
+}
+]);

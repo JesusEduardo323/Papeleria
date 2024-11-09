@@ -1,0 +1,33 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección det_pro_prov con validaciones adicionales
+db.createCollection("det_pro_prov", {
+	validator: {
+		$jsonSchema: {
+			bsonType: "object",
+			title: "Validación de Detalle de Producto y Proveedor",
+			required: ["ClvPro", "ClvProv", "PrecionCompra", "PlazoEntrega"],
+			properties: {
+				ClvPro: {
+				bsonType: "int",
+				description: "Clave del producto, referenciado a la colección productos"
+				},
+				ClvProv: {
+				bsonType: "int",
+				description: "Clave del proveedor, referenciado a la colección proveedores"
+				},
+				PrecionCompra: {
+				bsonType: "double",
+				description: "Precio de compra del producto",
+				minimum: 0 // Asegura que el precio de compra sea mayor que cero
+				},
+				PlazoEntrega: {
+				bsonType: "int",
+				description: "Plazo de entrega del producto en días",
+				minimum: 1 // El plazo debe ser al menos 1 día
+				}
+			}
+		}
+	}
+})
