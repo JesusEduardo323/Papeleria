@@ -1,0 +1,152 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de productos y inventario embebida
+db.createCollection("Productos", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: "Validación del objeto Productos",
+            required: ["ClvPro", "Nombre", "Precio", "Costo", "Ganancia", "Descuento", "Imagen", "Inventario"],
+            properties: {
+                ClvPro: {
+                    bsonType: "int",
+                    description: "Clave única del producto"
+                },
+                Nombre: {
+                    bsonType: "string",
+                    description: "Nombre del producto"
+                },
+                Precio: {
+                    bsonType: "double",
+                    description: "Precio de venta del producto"
+                },
+                Costo: {
+                    bsonType: "double",
+                    description: "Costo de adquisición del producto"
+                },
+                Ganancia: {
+                    bsonType: "double",
+                    description: "Margen de ganancia del producto"
+                },
+                Descuento: {
+                    bsonType: "double",
+                    description: "Descuento aplicado al producto"
+                },
+                Imagen: {
+                    bsonType: "string",
+                    description: "URL de la imagen del producto"
+                },
+                Inventario: {
+                    bsonType: "object",
+                    required: ["CantidadDisponible", "CantidadMinima", "CantidadMaxima", "FechaActualizacion"],
+                    properties: {
+                        CantidadDisponible: {
+                            bsonType: "int",
+                            description: "Cantidad disponible en inventario",
+                            minimum: 0
+                        },
+                        CantidadMinima: {
+                            bsonType: "int",
+                            description: "Cantidad mínima de stock",
+                            minimum: 0
+                        },
+                        CantidadMaxima: {
+                            bsonType: "int",
+                            description: "Cantidad máxima de stock",
+                            minimum: 0
+                        },
+                        FechaActualizacion: {
+                            bsonType: "date",
+                            description: "Fecha de la última actualización del inventario"
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+
+// Crear un índice para que las búsquedas sean más rápidas y que las claves de producto sean únicas
+db.productos.createIndex(
+    { ClvPro: 1 }, 
+    { unique: true } 
+)
+
+
+
+
+// Usar la base de datos
+use("Papeleria")
+
+// Crear la colección de productos y inventario embebida
+db.createCollection("Inventario", {
+    validator: {
+        $jsonSchema: {
+			bsonType: "object",
+			title: "Validación del objeto Inventario",
+            required: ["Producto", "CantidadDisponible", "CantidadMinima", "CantidadMaxima", "FechaActualizacion"],
+            properties: {
+				Producto:{
+					bsonType: "object",
+					required: ["ClvPro", "Nombre", "Precio", "Costo", "Ganancia", "Descuento", "Imagen", "Inventario"],
+					properties: {
+						ClvPro: {
+							bsonType: "int",
+							description: "Clave única del producto"
+						},
+						Nombre: {
+							bsonType: "string",
+							description: "Nombre del producto"
+						},
+						Precio: {
+							bsonType: "double",
+							description: "Precio de venta del producto"
+						},
+						Costo: {
+							bsonType: "double",
+							description: "Costo de adquisición del producto"
+						},
+						Ganancia: {
+							bsonType: "double",
+							description: "Margen de ganancia del producto"
+						},
+						Descuento: {
+							bsonType: "double",
+							description: "Descuento aplicado al producto"
+						},
+						Imagen: {
+							bsonType: "string",
+							description: "URL de la imagen del producto"
+						}
+					}
+				},
+                CantidadDisponible: {
+					bsonType: "int",
+                    description: "Cantidad disponible en inventario",
+                    minimum: 0
+                },
+				CantidadMinima: {
+                    bsonType: "int",
+                    description: "Cantidad mínima de stock",
+                    minimum: 0
+                },
+                CantidadMaxima: {
+                    bsonType: "int",
+                    description: "Cantidad máxima de stock",
+                    minimum: 0
+                },
+                FechaActualizacion: {
+                    bsonType: "date",
+                    description: "Fecha de la última actualización del inventario"
+                }
+            }
+        }
+    }
+})
+
+// Crear un índice para que las búsquedas sean más rápidas y que las claves de producto sean únicas
+db.productos.createIndex(
+    { ClvPro: 1 }, 
+    { unique: true } 
+)

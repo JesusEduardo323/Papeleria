@@ -1,0 +1,21 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Insertar un documento en la colección de proveedores
+// Insertar un documento en la colección "proveedores"
+db.proveedores.insertOne({
+    ClvProv: 101,
+    Nombre: "Proveedor ABC",
+    Telefono: ["9876543210", "1234567890"],  // Lista de teléfonos
+    Domicilio: {
+        Ciudad: "Guadalajara",
+        Region: "Jalisco",
+        CP: 44100, // Código postal como int
+        Pais: "MX", // Cambiar según tu formato
+        Calle: "Calle Ejemplo",
+        NumCasa: 25
+    },
+    Calificacion: 4,
+    PlazoEntrega: 2,
+    Reputacion: "buena"
+});
