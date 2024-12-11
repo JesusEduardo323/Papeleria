@@ -1,0 +1,6 @@
+// Usar la base de datos
+use("Papeleria")
+
+// Consultar los registros
+// SELECT *  FROM proveedores
+db.proveedores.find()

@@ -1,0 +1,103 @@
+use('Papeleria')
+
+//froma embebida
+db.createCollection("Productos", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["ClvPro","nombre", "precio", "costo","Ganancia","Descuento","Imagen", "subcategoria"],
+            properties: {
+				ClvPro: { 
+                    bsonType: "int", 
+                    description: "Debe ser una cadena de texto" 
+                },
+				nombre: { 
+                    bsonType: "string", 
+                    description: "Debe ser una cadena de texto" 
+                },
+                precio: { 
+                    bsonType: "double", 
+                    description: "Debe ser un número decimal" 
+                },
+                costo: { 
+                    bsonType: "double", 
+                    description: "Debe ser un número decimal" 
+                },
+                Ganancia: { 
+                    bsonType: "double", 
+                    description: "Debe ser un número decimal" 
+                },
+                Descuento: { 
+                    bsonType: "double", 
+                    description: "Porcentaje de descuento" 
+                },
+                Imagen: { 
+                    bsonType: "string", 
+                    description: "Url de la imagen" 
+                },
+                subcategoria: {
+                    bsonType: "object",
+                    required: ["clvsubcat", "nombre","clvcat"],
+                    properties: {
+                        clvsubcat: { 
+                            bsonType: "int", 
+                            description: "ID de la subcategoría" 
+                        },
+                        nombre: { 
+                            bsonType: "string", 
+                            description: "Debe ser una cadena de texto" 
+                        },
+						clvcat: { 
+                            bsonType: "int", 
+                            description: "ID de la categoría" 
+                        }
+                    }
+                }
+            }
+        }
+    }
+});
+
+//froma referenciada
+db.createCollection("Productos_Ref", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["ClvPro","nombre", "precio", "costo","Ganancia","Descuento","Imagen", "subcategoria"],
+            properties: {
+				ClvPro: { 
+                    bsonType: "int", 
+                    description: "Debe ser la clave del rpoducto" 
+                },
+				nombre: { 
+                    bsonType: "string", 
+                    description: "Debe ser una cadena de texto" 
+                },
+                precio: { 
+                    bsonType: "double", 
+                    description: "Debe ser un número decimal" 
+                },
+                costo: { 
+                    bsonType: "double", 
+                    description: "Debe ser un número decimal" 
+                },
+                Ganancia: { 
+                    bsonType: "double", 
+                    description: "Debe ser un número decimal" 
+                },
+                Descuento: { 
+                    bsonType: "double", 
+                    description: "Porcentaje de descuento" 
+                },
+                Imagen: { 
+                    bsonType: "string", 
+                    description: "Url de la imagen" 
+                },
+                subcategoria: {
+                    bsonType: "int",
+                    description: "ID de la subcategoría" 
+                }
+            }
+        }
+    }
+});
